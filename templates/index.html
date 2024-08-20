@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airline Satisfaction Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label, select, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        select {
+            height: 40px;
+        }
+        input[type="submit"] {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        h2 {
+            text-align: center;
+            color: #007BFF;
+        }
+        </style>
+        <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("static/Blue_Sky.jpg"); 
+        background-size: cover; /* This will make the background image cover the entire viewport */
+        background-repeat: no-repeat; /* Prevent the background image from repeating */
+    }
+    </style>
+    <style>
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #333; /* Text color */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Airline Satisfaction Prediction</h1>
+    <p>Welcome to the Airline Satisfaction Prediction tool created using Machine Learning.Our prediction tool is designed to help you assess and predict your airline passenger satisfaction based on various factors.</p>
+
+<p>By providing us with essential information such as your gender, age, customer type, and other flight-related details, we can analyze your preferences and expectations. We'll take into account factors like in-flight services, booking experience, seat comfort, and more, to give you an estimate of  overall satisfaction with your airline service.</p>
+
+<p>Simply fill out the form on this page with the details, and we'll provide you with a prediction of your airline satisfaction level. This prediction can assist you in making informed decisions when planning future air travel, ensuring that your customer's journey meets your expectations and needs.</p>
+
+<p>Start by entering your information and let us help you predict your airline passenger satisfaction. Let their Journey be comfortable!</p>
+
+    <form action="/login" method="post">
+        <label for="Gender">Gender:</label>
+        <select id="Gender" name="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="Customer Type">Customer Type:</label>
+        <select id="Customer Type" name="Customer Type">
+            <option value="Loyal">Loyal Customer</option>
+            <option value="disloyal">disloyal Customer</option>
+        </select>
+
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" min="0" max="120" placeholder="Enter Age">
+
+        <label for="Type of Travel">Type of Travel:</label>
+        <select id="Type of Travel" name="Type of Travel">
+            <option value="Business travel">Business Travel</option>
+            <option value="Personal Travel">Personal Travel</option>
+        </select>
+
+        <label for="Class">Class:</label>
+        <select id="Class" name="Class">
+            <option value="Eco">Eco</option>
+            <option value="Business">Business</option>
+            <option value="Eco Plus">Eco Plus</option>
+        </select>
+
+        <label for="Flight Distance">Flight Distance:</label>
+        <input type="number" id="Flight Distance" name="Flight Distance" min="0" placeholder="Enter Flight Distance">
+
+            <label for="Inflight wifi service">Inflight wifi service(1-5):</label>
+    <input type="number" id="Inflight wifi service" name="Inflight wifi service" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Departure/Arrival time convenient">Departure/Arrival Time Convenient (1-5):</label>
+    <input type="number" id="Departure/Arrival time convenient" name="Departure/Arrival time convenient" min="1" max="5" placeholder="1-5">
+
+    <label for="Ease of Online booking">Ease of Online booking(1-5):</label>
+    <input type="number" id="Ease of Online booking" name="Ease of Online booking" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Gate location">Gate location(1-5):</label>
+    <input type="number" id="Gate location" name="Gate location" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Food and drink">Food and drink(1-5):</label>
+    <input type="number" id="Food and drink" name="Food and drink" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Online boarding">Online boarding(1-5):</label>
+    <input type="number" id="Online boarding" name="Online boarding" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Seat comfort">Seat comfort(1-5):</label>
+    <input type="number" id="Seat comfort" name="Seat comfort" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Inflight entertainment">Inflight entertainment(1-5):</label>
+    <input type="number" id="Inflight entertainment" name="Inflight entertainment" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="On-board service">On-board service(1-5):</label>
+    <input type="number" id="On-board service" name="On-board service" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Leg room service">Leg room service(1-5):</label>
+    <input type="number" id="Leg room service" name="Leg room service" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Baggage handling">Baggage handling(1-5):</label>
+    <input type="number" id="Baggage handling" name="Baggage handling" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Checkin service">Checkin service(1-5):</label>
+    <input type="number" id="Checkin service" name="Checkin service" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Inflight service">Inflight service(1-5):</label>
+    <input type="number" id="Inflight service" name="Inflight service" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Cleanliness">Cleanliness(1-5):</label>
+    <input type="number" id="Cleanliness" name="Cleanliness" min="1" max="5" placeholder="1-5">
+
+    <br><br>
+
+    <label for="Departure Delay in Minutes">Departure Delay in Minutes:</label>
+    <input type="number" id="Departure Delay in Minutes" name="Departure Delay in Minutes" min="0" placeholder="Enter Departure Delay">
+
+    <br><br>
+
+    <label for="Arrival Delay in Minutes">Arrival Delay in Minutes:</label>
+    <input type="number" id="Arrival Delay in Minutes" name="Arrival Delay in Minutes" min="0" placeholder="Enter Arrival Delay">
+
+    <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <h2>{{y}}</h2>
+</body>
+</html>
